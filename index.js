@@ -4,6 +4,15 @@ var fs = require('fs');
 var package = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 var version=package.version;
 
+var EventEmitter = require('events').EventEmitter;
+
+var jeu = new EventEmitter();
+
+jeu.on('gameover', function(message){
+    console.log(message);
+});
+
+jeu.emit('gameover', 'Vous avez perdu !');
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
