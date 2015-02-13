@@ -8,7 +8,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
-  response.send('Bonjour Camille Colette Paule Millet \n je vous aime plus que tout et je suis super content de vous pacser !  ('+version+')');
+  response.send('Bonjour Camille Colette Paule Millet \ je vous aime plus que tout et je suis super content de vous pacser ! \ Liste des noms de trucs a faire avant quon decede  ('+version+')');
 });
 
 app.listen(app.get('port'), function() {
